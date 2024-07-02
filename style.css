@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&display=swap');
+
+:root {
+    --azul-escuro: #012A56;
+    --rosa: #E10055;
+    --branco: #FFFFFF;
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    background-image: url(./img/Grafico.png);
+    background-repeat: no-repeat;
+    background-position-x: right;  
+}
+
+.container {
+    display: flex;
+    opacity: 0.9;
+}
+
+.menu-cabecalho {
+    display: none;
+}
+
+.menu {
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__item {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 3em 3em;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--branco);
+    width: 30%;
+    height: 100vh;
+}
+
+.login__identificacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__logo, .login__icone {
+    width: 40%;
+}
+
+.login__logo {
+    margin: 3rem 0 7rem 0  ;
+}
+
+.login__email, .login__senha {
+    border-radius: 30px;
+    border: 2px solid var(--azul-escuro);
+    padding: 1em 6em 1em 1em;
+    margin: 1rem;
+    color: var(--rosa);
+    font-family: var(--fonte-principal);
+    width: 500;
+}
+
+.login__email {
+    margin-top: 3em;
+}
+
+.login__email::placeholder{
+    background-image: url(./img/icone_usuario.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    color: var(--rosa);
+    padding-left: 2em;
+}
+
+.login__senha {
+    background-image: url(./img/icone_cadeado.svg) no-repeat;
+}
+
+.login__senha::placeholder{
+    background-image: url(./img/icone_cadeado.svg);
+    background-repeat: no-repeat;
+    color: var(--rosa);
+    padding-left: 2em
+    
+}
+
+.login__botao {
+    border: 2px solid;
+    background: var(--rosa);
+    border-radius: 30px;
+    padding: 1em 8em;
+    margin: 3em;
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    width: 500;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 10px  #262f45;
+}
+
+.login__botao:hover {
+    box-shadow: 0 8px 12px 0 rgba(19,27,46,.94);
+    background-color: var(--azul-escuro);
+    color: #fff;
+    border: solid 1px white;
+    
+}
+
+.acoes {
+    display: flex;
+    color: var(--rosa);
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.acoes__senha {
+    margin: 0 0 0 2em;
+    text-decoration: none;
+    color: var(--rosa);
+}
+
+.acoes__input {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+input:checked {
+    background: #E10055;
+}
+
+.menu-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    margin: 2em;
+}
+
+.texto__titulo {
+    font-size: 8em;
+    margin-right: 0,8em;
+}
+
+.texto__conteudo {
+    font-weight: 200;
+    width: 40%;
+    text-align: right;
+    margin-right: 3em;
+}
+
+.rodape {
+    margin: 0;
+}
+
+.login__logo-neg {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-texto {
+        display: none;
+    }
+    .login {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   .login__logo {
+    display: none;
+   }
+
+   .login__logo-cabecalho {
+    width: 30%;
+   }
+
+    .menu-cabecalho {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem;
+    }
+
+   .menu__item {
+    color: var(--azul-escuro);
+    font-family: var(--fonte-principal);
+    margin: 1rem 2rem 4rem 1rem;
+   }
+}
